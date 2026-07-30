@@ -1,0 +1,91 @@
+/* Punto Smart OS v2 — compact UI, provider menus and benefits */
+:root{--v2-border:rgba(151,184,226,.2);--v2-panel:rgba(9,18,34,.9);--v2-accent:#2ac9ff}
+.app-shell{padding-top:16px}
+.topbar{gap:14px;margin-bottom:12px}
+.brand{gap:12px}
+.brand-mark{width:64px!important;height:64px!important;flex-basis:64px!important;box-shadow:0 0 24px rgba(28,155,255,.22)!important}
+.brand-mark:after{inset:12px!important}
+.brand-text span{font-size:25px!important}
+.brand-text strong{font-size:34px!important;letter-spacing:1.5px!important}
+.status-zone{gap:6px!important;justify-content:flex-end;min-width:0}
+.status-pill{min-height:48px!important;padding:0 10px!important;gap:8px!important;border-left:0!important;border:1px solid rgba(255,255,255,.09)!important;border-radius:13px!important;background:rgba(8,16,31,.62)!important}
+.status-pill b{font-size:15px!important;line-height:1.05}
+.status-pill small{font-size:11px!important;line-height:1.05;margin-top:4px!important}
+.status-icon{font-size:22px!important}
+.dolar-logo{width:38px!important;height:38px!important;border:1px solid rgba(67,255,113,.55)!important;border-radius:11px!important;background:linear-gradient(145deg,#0c2d1b,#07130e)!important;color:#55ff8a!important;font-size:21px!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04),0 0 14px rgba(47,255,97,.16)!important}
+.dollar-live #dollarBlue{color:#69ff99!important;font-size:16px!important}
+.dollar-live #dollarOfficial{color:#9cacbf!important}
+.country-global-pill{display:flex!important}
+.country-select{max-width:128px}
+
+.benefits-v2{width:min(1120px,100%);margin:0 auto 12px;padding:12px 14px;border:1px solid rgba(76,183,255,.18);border-radius:16px;background:linear-gradient(120deg,rgba(19,50,91,.48),rgba(8,18,34,.82) 45%,rgba(9,32,52,.62));box-shadow:0 14px 34px rgba(0,0,0,.18)}
+.benefit-lead{display:flex;align-items:center;justify-content:center;gap:9px;color:#f4f9ff;text-align:center;font-size:18px;line-height:1.25;margin-bottom:10px}
+.benefit-lead span{font-size:22px}
+.benefit-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.benefit-item{display:flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:7px 9px;border:1px solid rgba(255,255,255,.08);border-radius:11px;background:rgba(255,255,255,.04);color:#d9e8f8;text-align:center;font-size:12px;line-height:1.2}
+.benefit-item span{font-size:17px;flex:0 0 auto}
+
+.smart-search-v2{width:min(980px,100%)!important;margin:0 auto 15px!important;padding:11px!important;border-radius:16px!important}
+.smart-search-v2 .smart-search-head{margin:0 3px 7px!important}
+.smart-search-v2 .smart-search-badge{padding:5px 10px!important;font-size:11px!important;letter-spacing:.35px!important}
+.smart-search-v2 .smart-search-head small{color:#8fa9c6;font-size:12px;font-weight:800}
+.smart-search-v2 .smart-search-box{height:54px!important;border-radius:12px!important;padding:0 9px 0 12px!important;gap:10px!important}
+.smart-search-provider-icon{width:26px;height:26px;object-fit:contain;border-radius:6px;flex:0 0 26px;background:#fff;padding:2px;box-sizing:border-box}
+.smart-search-v2 .smart-search-box input{font-size:18px!important}
+.smart-search-v2 .smart-search-go{height:38px!important;padding:0 17px!important}
+.search-categories{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px;margin-top:9px;overflow:visible}
+.search-category-wrap{position:relative;min-width:0}
+.search-category{width:100%;height:38px;display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid rgba(255,255,255,.13);border-radius:11px;background:rgba(255,255,255,.055);color:#dbe8f7;font-size:13px;font-weight:850;cursor:pointer;transition:.16s ease}
+.search-category:hover,.search-category:focus-visible{border-color:rgba(54,202,255,.55);color:#fff;outline:none}
+.search-category.active{background:linear-gradient(100deg,rgba(17,69,178,.96),rgba(10,143,230,.94));border-color:rgba(83,202,255,.82);color:#fff;box-shadow:0 7px 20px rgba(10,108,225,.21)}
+.search-category-icon{width:20px;height:20px;object-fit:contain;border-radius:5px;background:#fff;padding:2px;box-sizing:border-box}
+.search-caret{font-size:9px;color:#a9bdd3;transition:transform .16s ease}
+.search-category[aria-expanded="true"] .search-caret{transform:rotate(180deg)}
+.search-provider-menu{position:absolute;left:0;right:0;top:44px;z-index:60;display:none;min-width:180px;padding:7px;border:1px solid rgba(110,178,238,.28);border-radius:12px;background:rgba(7,15,29,.98);box-shadow:0 18px 44px rgba(0,0,0,.46);backdrop-filter:blur(14px)}
+.search-category-wrap:last-child .search-provider-menu,.search-category-wrap:nth-last-child(2) .search-provider-menu{left:auto;right:0}
+.search-provider-menu.open{display:grid;gap:4px}
+.search-provider-option{display:flex;align-items:center;gap:9px;width:100%;padding:8px 9px;border:0;border-radius:8px;background:transparent;color:#dce8f6;font-size:13px;font-weight:750;text-align:left;cursor:pointer}
+.search-provider-option:hover,.search-provider-option:focus-visible{background:rgba(43,164,255,.14);outline:none;color:#fff}
+.search-provider-option.selected{background:rgba(43,164,255,.2);color:#fff}
+.search-provider-option img{width:22px;height:22px;object-fit:contain;border-radius:5px;background:#fff;padding:2px;box-sizing:border-box}
+
+@media(max-width:1120px){
+  .benefit-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .status-zone .country-global-pill{display:none!important}
+}
+@media(max-width:920px){
+  .app-shell{padding-top:10px}
+  .topbar{align-items:flex-start}
+  .brand-mark{width:54px!important;height:54px!important;flex-basis:54px!important}
+  .brand-text span{font-size:21px!important}.brand-text strong{font-size:29px!important}
+  .benefit-lead{font-size:16px}
+  .benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .search-categories{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .search-category-wrap:nth-child(3n) .search-provider-menu{left:auto;right:0}
+  .search-category-wrap:nth-last-child(2) .search-provider-menu{left:0;right:auto}
+}
+@media(max-width:620px){
+  .app-shell{padding-left:10px!important;padding-right:10px!important}
+  .topbar{margin-bottom:8px}
+  .brand{gap:7px}.brand-mark{width:42px!important;height:42px!important;flex-basis:42px!important}.brand-mark:after{inset:8px!important}
+  .brand-text span{font-size:16px!important}.brand-text strong{font-size:22px!important}
+  .status-zone{max-width:none!important}
+  .status-zone .hide-small,.status-zone .country-global-pill{display:none!important}
+  .status-pill{min-height:42px!important;padding:0 7px!important}
+  .dolar-logo{width:32px!important;height:32px!important;font-size:17px!important}
+  .dollar-live .live-status-copy{display:block!important}.dollar-live #dollarBlue{font-size:13px!important}.dollar-live #dollarOfficial{font-size:9px!important}
+  .benefits-v2{padding:9px;margin-bottom:9px}
+  .benefit-lead{font-size:14px;margin-bottom:7px}
+  .benefit-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:2px;gap:6px}
+  .benefit-item{min-width:190px;scroll-snap-align:start;font-size:11px}
+  .smart-search-v2{padding:8px!important;margin-bottom:11px!important}
+  .smart-search-v2 .smart-search-head{margin-bottom:5px!important}
+  .smart-search-v2 .smart-search-box{height:48px!important}
+  .smart-search-v2 .smart-search-box input{font-size:15px!important}
+  .smart-search-provider-icon{width:23px;height:23px;flex-basis:23px}
+  .search-categories{gap:5px;margin-top:7px}
+  .search-category{height:34px;font-size:11px;gap:5px;padding:0 5px}
+  .search-category-icon{width:17px;height:17px}
+  .search-provider-menu{top:39px;min-width:165px}
+}
+@media(max-width:380px){.search-category span:nth-child(2){font-size:10px}.benefit-item{min-width:175px}}
